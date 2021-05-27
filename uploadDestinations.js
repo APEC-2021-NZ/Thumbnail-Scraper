@@ -36,7 +36,7 @@ let destinations = []
 
 const main = async () => {
     await new Promise(function (resolve, reject) {
-        fs.createReadStream('cities.csv')
+        fs.createReadStream('destinations.csv')
             .pipe(csv())
             .on('data', async (object) => {
                 destinations.push(object)
@@ -49,9 +49,9 @@ const main = async () => {
     let count = 1
 
     for (const { destination, city } of destinations) {
-        if (country !== 'New Zealand') continue
-
-        const imagepath = `./image/city/${city.split(' ').join('_')}.png`
+        const imagepath = `./image/destination/${destination
+            .split(' ')
+            .join('_')}.png`
 
         const imageUrl = await saveImage(imagepath)
 
