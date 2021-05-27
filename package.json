@@ -4,12 +4,27 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node -r esm index.js"
+        "imageCities": "node -r esm imageCities.js",
+        "uploadCities": "node -r esm uploadCities.js",
+        "imageDestinations": "node -r esm imageDestinations.js",
+        "uploadDestinations": "node -r esm uploadDestinations.js",
+        "imageExperiences": "node -r esm imageExperiences.js",
+        "uploadExperiences": "node -r esm uploadExperiences.js",
+        "imageTags": "node -r esm imageTags.js",
+        "uploadTags": "node -r esm uploadTags.js"
     },
     "author": "",
     "license": "MIT",
     "dependencies": {
-        "esm": "^3.2.25"
+        "axios": "^0.21.1",
+        "better-queue": "^3.8.10",
+        "csv-parser": "^3.0.0",
+        "dotenv": "^10.0.0",
+        "esm": "^3.2.25",
+        "firebase-admin": "^9.9.0",
+        "fireo": "^1.0.3",
+        "images-scraper": "^6.3.0",
+        "sharp": "^0.28.3"
     },
     "devDependencies": {
         "eslint": "^7.27.0",
